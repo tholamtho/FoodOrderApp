@@ -9,6 +9,9 @@ app.get("/", (req: any, res: any) => {
   res.send("Main page");
 });
 
+//MiddleWare
+app.use(express.json());
+
 app.get(`${api}/products`, (req: any, res: any) => {
   const products: Products = {
     id: "1",
