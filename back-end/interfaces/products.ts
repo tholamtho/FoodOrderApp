@@ -1,3 +1,4 @@
+import UserComments from "./comments";
 export interface Products {
   id: String;
   name: String;
@@ -6,4 +7,5 @@ export interface Products {
   description?: String;
   isInStock: Boolean;
   provider: String;
+  rated?: Array<UserComments>;
 }
