@@ -1,5 +1,5 @@
 const express = require("express");
-import { Products } from "./interface";
+import { Products } from "./interfaces/products";
 require("dotenv/config");
 const app = express();
 
@@ -17,6 +17,8 @@ app.get(`${api}/products`, (req: any, res: any) => {
     id: "1",
     name: "food-no-1",
     price: 500,
+    isInStock: true,
+    provider: "restaurant A",
   };
 
   res.send(products);

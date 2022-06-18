@@ -3,4 +3,7 @@ export interface Products {
   name: String;
   price: Number;
   image?: String;
+  description?: String;
+  isInStock: Boolean;
+  provider: String;
 }
