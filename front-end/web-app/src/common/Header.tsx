@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class header extends Component {
-  render() {
-    return <div>header</div>;
-  }
-}
+const Header = () => {
+  return <header>header</header>;
+};
+
+export default Header;
