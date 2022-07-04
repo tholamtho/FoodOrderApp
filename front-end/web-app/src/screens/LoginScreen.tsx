@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class LoginScreen extends Component {
-  render() {
-    return <div>LoginScreen</div>;
-  }
-}
+const LoginScreen = () => {
+  return <div>LoginScreen</div>;
+};
+
+export default LoginScreen;
