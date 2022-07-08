@@ -1,19 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 import Header from "./common/Header";
 import Footer from "./common/Footer";
+import { Container, Row, Col } from "react-bootstrap";
+import { DeliveryScreen } from "./screens/DeliverScreen";
+import HomeScreen from "./screens/HomeScreen";
+
 const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Welcome to Shop</h1>
-      </main>
+      <HomeScreen />
       <Footer />
     </>
   );
 };
 
 export default App;
-
