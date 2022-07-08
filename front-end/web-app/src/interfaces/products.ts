@@ -4,4 +4,5 @@ export default interface ProductInterface {
   details: string;
   rated: number;
   imageSource: string;
+  price?: number;
 }
