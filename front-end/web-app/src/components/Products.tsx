@@ -4,24 +4,15 @@ import { Card } from "react-bootstrap";
 import ProductInterface from "../interfaces/products";
 import { handleClickAddToCard } from "../utils/addToCart";
 import { Rating } from "react-simple-star-rating";
+import { StarFill } from "react-bootstrap-icons";
 export const Products: React.FC<ProductInterface> = (
   product: ProductInterface
 ) => {
-  const [ratingValue, setRatingValue] = useState(product.rated);
-
-  const handleRating = (rate: number) => {
-    setRatingValue(rate);
-  };
-
-  // later in your code call rating 'state' with your initial value
-  const handleReset = () => {
-    setRatingValue(2.5);
-  };
   return (
     <>
       <Card
         className="my-3 p3 rounded"
-        style={{ height: "535px", width: "350px" }}
+        style={{ height: "630px", width: "350px" }}
       >
         <a href={`/products/${product.id}`}>
           <Card.Img
@@ -30,12 +21,9 @@ export const Products: React.FC<ProductInterface> = (
           />
           <h2>{product.name}</h2>
         </a>
-        <Rating
-          onClick={handleRating}
-          initialValue={5}
-          ratingValue={product.rated}
-        />
+        {!!product.type ? <p>Type: {product.type}</p> : <div />}
         <p style={{ overflow: "hidden" }}>Product Details: {product.details}</p>
+        <Rating initialValue={5} ratingValue={product.rated} />
         <Button variant="primary">Add To Cart</Button>
       </Card>
     </>

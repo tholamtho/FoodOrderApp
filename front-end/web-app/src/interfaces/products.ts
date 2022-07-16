@@ -5,4 +5,5 @@ export default interface ProductInterface {
   rated: number;
   imageSource: string;
   price?: number;
+  type?: string;
 }
