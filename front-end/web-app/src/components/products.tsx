@@ -2,12 +2,10 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import { Card } from "react-bootstrap";
 import ProductInterface from "../interfaces/products";
+import { handleClickAddToCard } from "../utils/addToCart";
 export const Products: React.FC<ProductInterface> = (
   product: ProductInterface
 ) => {
-  const handleClickAddToCard :any = (name: string) => {
-    alert(`Added ${name} to card successfully`);
-  }
   return (
     <>
     <Card className="my-3 p3 rounded">
