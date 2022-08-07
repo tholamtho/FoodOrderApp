@@ -1,9 +1,11 @@
 const express = require("express");
+const http = require("http");
 import { Products } from "./interfaces/products";
 require("dotenv/config");
 const app = express();
 
 let api = process.env.API_URL;
+
 
 app.get("/", (req: any, res: any) => {
   res.send("Main page");
