@@ -6,6 +6,13 @@ const app = express();
 
 let api = process.env.API_URL;
 
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.write("Hello World!");
+    res.end();
+  })
+  .listen(8080);
 
 app.get("/", (req: any, res: any) => {
   res.send("Main page");
